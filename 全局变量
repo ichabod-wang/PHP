@@ -109,8 +109,11 @@ echo $var4 . "<br />";
    官方的解释是：$GLOBALS['var']是外部的全局变量本身，global $var是外部$var的同名引用或者指针。
    意味着$GLOBAL在一个脚本的全部作用域中都可用，在函数或方法中无需执行global $variable; 就可以访问它们。
    与所有其他超全局变量不同，$GLOBALS在PHP中总是可用的。
+   <html>
+   <body>
    <hr >
-   
+   </body>
+   </html>
    另一个例子：
 
 <?php
