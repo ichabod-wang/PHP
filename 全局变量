@@ -108,7 +108,10 @@ echo $var4 . "<br />";
 　　输出$var2的值为1，$var4的值为2，因为$var3的引用指向了$var4的引用地址。$var4的实际值并没有改变。
    官方的解释是：$GLOBALS['var']是外部的全局变量本身，global $var是外部$var的同名引用或者指针。
    意味着$GLOBAL在一个脚本的全部作用域中都可用，在函数或方法中无需执行global $variable; 就可以访问它们。
-   与所有其他超全局变量不同，$GLOBALS在PHP中总是可用的。另一个例子：
+   与所有其他超全局变量不同，$GLOBALS在PHP中总是可用的。
+   <hr >
+   
+   另一个例子：
 
 <?php
 $var1 = 1;
@@ -126,5 +129,5 @@ function test2(){
 test2();
 echo $var2;
 ?>
-复制代码
-　　输出结果是$var1不存在，而$var2的值为1。这就证明，$var2只是别名引用，本身的值没有受到任何的改变。也就是说global $var其实就是$var = &$GLOBALS['var']，调用外部变量的一个别名而已！
+　输出结果是$var1不存在，而$var2的值为1。这就证明，$var2只是别名引用，本身的值没有受到任何的改变。
+  也就是说global $var其实就是$var = &$GLOBALS['var']，调用外部变量的一个别名而已！
